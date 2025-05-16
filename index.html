@@ -41,13 +41,13 @@
 
         .download-btn {
             background-color: #f9ad17;
-            border: 2px solid #000000;
+            border: 4px solid #000000;
             color: black;
             padding: 1.5vh 3vh;
             text-align: center;
             font-size: 3.7vh;
             cursor: pointer;
-            border-radius: 20px;
+            border-radius: 25px;
             text-decoration: none;
             display: flex; /* Flexbox para facilitar o alinhamento */
             justify-content: center;
@@ -81,28 +81,16 @@
         }
 
         .logo {
-            background-image: url('https://i.ibb.co/v2mk6Tw/Logo.png');
+            background-image: url('../Photos/Icons/Logo.png');
             background-size: cover;
             width: 3.7%;
             height: 8.25%;
             margin-left: 20px;
             position: absolute;
-            top: 9%;
+            top: 8.5%;
             left: 6%;
             z-index: 1;
         }
-        /*
-        .rect-b {
-            background-color: #6f9ead; 
-            width: 100vw; Ocupa 100% da largura da tela  a6a6a6
-            height: 135px;
-            position: absolute;
-            top: 0;
-            left: 0; Ajuste para começar da borda esquerda 
-            z-index: 0;
-        }
-        */
-
 
         .text-block {
             position: absolute;
@@ -143,29 +131,55 @@
             display: block;
         }
 
+        .skip-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #000;
+            color: #fff;
+            padding: 10px;
+            z-index: 100;
+            transform: translateY(-100%);
+            transition: transform 0.3s;
+        }
+
+        .skip-link:focus {
+            transform: translateY(0);
+        }
+
+
     </style>
 </head>
 <body>
+    
+    <a href="#main-content" class="skip-link">Saltar para o conteúdo principal</a>
+
+    <!-- restante conteúdo -->
+
+    <div id="main-content" class="text-block">
+        <!-- conteúdo principal -->
+    </div>
+
     <div class="text-block">
-        <p><img src="https://i.ibb.co/RpJqFBh8/checkbox.png" alt="checkbox" width="40" height="40"> <strong>Learn</strong> about colour blindness</p>
-        <p><img src="https://i.ibb.co/RpJqFBh8/checkbox.png" alt="checkbox" width="40" height="40"> <strong>Experience</strong> how colour-blind people see</p>
-        <p><img src="https://i.ibb.co/RpJqFBh8/checkbox.png" alt="checkbox" width="40" height="40"> <strong>Adjust</strong> your screen for better vision</p>
-        <p><img src="https://i.ibb.co/RpJqFBh8/checkbox.png" alt="checkbox" width="40" height="40"> <strong>Challenge</strong> yourself with a colour vision test</p>
-    </div>    
+        <p><img src="../Photos/website/checkbox.png" alt="checkbox" width="40" height="40"> <strong>Learn</strong> about colour blindness</p>
+        <p><img src="../Photos/website/checkbox.png" alt="checkbox" width="40" height="40"> <strong>Experience</strong> how colour-blind people see</p>
+        <p><img src="../Photos/website/checkbox.png" alt="checkbox" width="40" height="40"> <strong>Adjust</strong> your screen for better vision</p>
+        <p><img src="../Photos/website/checkbox.png" alt="checkbox" width="40" height="40"> <strong>Challenge</strong> yourself with a colour vision test</p>
+    </div>
+       
     <h2>SightSync</h2>
-    <a href="https://drive.google.com/uc?export=download&id=1Zz8xh07jbWw_A_EjFQIlN4JHIXOziT2Y" class="download-btn">
+    <a href="https://drive.google.com/file/d/11qWaKhd7b6jcdX6lFyDJ6OcK3MHz87X7/view?usp=sharing" class="download-btn">
         <span class="arrow">↓</span>
         <span class="divider"></span> <!-- Linha vertical -->
         Download
     </a>
-
     <div class="image-frame">
-        <img src="https://i.postimg.cc/pdL4xJSw/1.png" alt="Image 1" class="slide-image">
-        <img src="https://i.postimg.cc/WzL5DG9b/2.png" alt="Image 2" class="slide-image">
-        <img src="https://i.postimg.cc/ZKmf4LBw/5.png" alt="Image 5" class="slide-image">
-        <img src="https://i.postimg.cc/vB6PHqtN/14.png" alt="Image 14" class="slide-image">
+        <img src="../Photos/website/1.png" alt="Image 1" class="slide-image">
+        <img src="../Photos/website/2.png" alt="Image 2" class="slide-image">
+        <img src="../Photos/website/5.png" alt="Image 5" class="slide-image">
+        <img src="../Photos/website/14.png" alt="Image 14" class="slide-image">
     </div>
-
+    
     <div class="logo"></div>
     <div class="rect-b"></div>
 
@@ -201,9 +215,6 @@
                 event.preventDefault();
             }
         });
-
-
     </script>
-
 </body>
 </html>
